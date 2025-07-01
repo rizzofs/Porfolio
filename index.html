@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Federico Rizzo - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Federico Sebastián Rizzo</h1>
+      <p>
+        Desarrollador Full Stack Jr. · Estudiante de Lic en Sistemas de
+        información
+      </p>
+    </header>
+
+    <section class="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Estudiante avanzado de la Licenciatura en Sistemas de Información y
+        desarrollador full stack junior. Tengo experiencia en el desarrollo de
+        aplicaciones web utilizando tecnologías como HTML, CSS/SASS, JavaScript,
+        Node.js y SQLite. Me especializo en crear soluciones funcionales y
+        orientadas a necesidades reales. Actualmente me encuentro liderando
+        proyectos propios mientras finalizo mi formación académica.
+      </p>
+    </section>
+
+    <section class="proyectos">
+      <h2>Proyectos</h2>
+
+      <div class="card">
+        <h3>Sistema de Punto de Venta (PDV)</h3>
+        <img
+          src="/pdv_inicio.png"
+          alt="Captura del Sistema de Punto de Venta"
+        />
+        <p>
+          Sistema de gestión para comercios locales, hecho con Node.js, SQLite3,
+          HTML, SASS y JavaScript. Permite gestionar ventas, productos,
+          proveedores y reportes.
+        </p>
+        <a href="https://github.com/SoftHorizontSystem/Punto_de_Venta" target="_blank">Ver en GitHub</a>
+        <button class="btn-toggle" onclick="toggleInfo(this)">
+          Más sobre el proyecto
+        </button>
+        <div class="info-extra" style="display: none">
+          <ul>
+            <li>✔️ ABM de productos, clientes y proveedores</li>
+            <li>✔️ Registro de ventas y cuentas corrientes</li>
+            <li>✔️ Lógica de caja y medios de pago</li>
+            <li>✔️ Base de datos local con SQLite3</li>
+            <li>🛠️ En desarrollo: reportes PDF y autenticación</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Podés agregar más proyectos con nuevas .card -->
+    </section>
+
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <p>📧 federico.s.rizzo@gmail.com</p>
+      <p>
+        🔗
+        <a href="https://www.linkedin.com/in/federico-s-rizzo/" target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+      <p>
+        📄
+        <a href="/Curriculum Vitae - Federico Rizzo.pdf" target="_blank"
+          >Descargar CV</a
+        >
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Federico Rizzo</p>
+    </footer>
+    <script>
+      function toggleInfo(button) {
+        const info = button.nextElementSibling;
+        const isVisible = info.style.display === "block";
+        info.style.display = isVisible ? "none" : "block";
+        button.textContent = isVisible
+          ? "Más sobre el proyecto"
+          : "Ocultar detalles";
+      }
+    </script>
+  </body>
+</html>
